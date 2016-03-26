@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+gem 'github-pages'
 gem 'jekyll'            	#Needed since this is a theme for Jekyll
 gem 'jekyll-sitemap'
 gem 'jekyll-feed'
