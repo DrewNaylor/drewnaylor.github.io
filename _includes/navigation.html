@@ -39,13 +39,10 @@
 
       <ul class="columns medium-4 right primary-nav">
 	{% for socials in site.data.socials %}
-	  <li class="right"><a href="{{ socials.href }}"><span class="icon-{{ socials.title }} socials"></span></a>
+	  <li class="right"><a href="{{ socials.href }}"><span class="icon-{{ socials.title }} socials"></span></a></li>
 	  
 	{% endfor %}
 	
-	{% for search in site.data.search %}<span {{ search.iframe }} search"></span>
-		</li>
-	{% endfor %}
 	</li>	
       </ul>
     </div>
