@@ -6,3 +6,6 @@ vendor/ruby
 Gemfile.lock
 images/image_optim_cache.yml
 .jekyll-metadata
+
+# Ignore Windows Thumbs.db files.
+Thumbs.db
