@@ -1,8 +1,8 @@
 - title: "home"
   href: "/"
 
-- title: "blog"
-  href: "/blog/"
+- title: "about"
+  href: "/pages/about.html"
 
 - title: "documentation"
   subcategories:
