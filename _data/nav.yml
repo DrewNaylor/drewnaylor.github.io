@@ -7,7 +7,7 @@
 - title: "my blog"
   href: "/blog/"
   
-- title: "use"
+- title: "rom hacking"
   subcategories:
     - subtitle: "installation"
       subhref: "/documentation/installation.html"
