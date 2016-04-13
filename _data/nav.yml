@@ -11,12 +11,12 @@
   subcategories:
     - subtitle: "Cheat Codes"
       subhref: "/pages/rom-hacking-pages/cheat-codes.html"
-    - subtitle: "configuration"
-      subhref: "/documentation/configuration.html"
-    - subtitle: "deployment"
-      subhref: "/documentation/deploy.html"
-    - subtitle: "basic use"
-      subhref: "/documentation/use.html"
+    - subtitle: "Editors"
+      subhref: "/pages/rom-hacking-pages/editors.html"
+    - subtitle: "Emulators"
+      subhref: "/pages/rom-hacking-pages/emulators.html"
+    - subtitle: "ROM Hacks"
+      subhref: "/pages/rom-hacking-pages/rom-hacks.html"
       
 - title: "external"
   external: "http://www.jekyllrb.com"
