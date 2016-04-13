@@ -11,7 +11,7 @@
 // Styling for mobile devices
 @media screen and (max-width: 768px) {
   .wrap {
-    margin-bottom: -$footer-height * 1.2; 
+    margin-bottom: -$footer-height * 2.8; 
   }
 }
 
@@ -82,7 +82,7 @@
 // Styling for mobile devices
 @media screen and (max-width: 768px) {
   .site-footer, .wrap:after {
-    height: $footer-height * 2.8; 
+    height: $footer-height * 1; 
   }
   
   .recent-posts ul li {
