@@ -1,13 +1,13 @@
 - title: "Home"
   href: "/"
 
-- title: "about"
+- title: "About"
   href: "/pages/about.html"
 
-- title: "my blog"
+- title: "My Blog"
   href: "/blog/"
   
-- title: "rom hacking"
+- title: "Rom Hacking"
   subcategories:
     - subtitle: "Cheat Codes"
       subhref: "/pages/rom-hacking-pages/cheat-codes.html"
