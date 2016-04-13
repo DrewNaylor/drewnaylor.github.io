@@ -18,6 +18,6 @@ var dN=new Array('Sunday','Monday','Today is: Tuesday','Wednesday','Thursday','F
 // Clock Part 1 - Ends Here
 // Clock Part 2 - This Starts/Displays Your Clock
 
-// <script language="JavaScript">dT();</script>
+<script language="JavaScript">dT();</script>
 
 // Clock Part 2 - Ends Here
