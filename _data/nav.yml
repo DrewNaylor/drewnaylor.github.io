@@ -9,8 +9,8 @@
   
 - title: "rom hacking"
   subcategories:
-    - subtitle: "installation"
-      subhref: "/documentation/installation.html"
+    - subtitle: "Cheat Codes"
+      subhref: "/pages/rom-hacking-pages/cheat-codes.html"
     - subtitle: "configuration"
       subhref: "/documentation/configuration.html"
     - subtitle: "deployment"
