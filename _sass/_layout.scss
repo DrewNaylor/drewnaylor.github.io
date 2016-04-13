@@ -82,7 +82,7 @@
 // Styling for mobile devices
 @media screen and (max-width: 768px) {
   .site-footer, .wrap:after {
-    height: $footer-height * 1; 
+    height: $footer-height; 
   }
   
   .recent-posts ul li {
