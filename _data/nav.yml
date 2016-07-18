@@ -20,9 +20,6 @@
       
 - title: "Videos"
   href: "/pages/videos.html"
-  subcategories:
-    - subtitle: "test"
-      subhref: "/pages/test-page.html"
 
 - title: "Misc"
   external-subcategories:
