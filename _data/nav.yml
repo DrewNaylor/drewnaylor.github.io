@@ -18,8 +18,8 @@
     - subtitle: "ROM Hacks"
       subhref: "/pages/rom-hacking-pages/rom-hacks.html"
       
-- title: "external"
-  external: "http://www.jekyllrb.com"
+- title: "Videos"
+  href: "/pages/videos.html"
   
 - title: "Misc"
   external-subcategories:
