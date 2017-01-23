@@ -25,5 +25,5 @@
   subcategories:
     - subtitle: "Links"
       subhref: "/pages/links.html"
-    - subtitle: "Source Code"
-      subhref: "https://github.com/chrisanthropic/slim-pickins-jekyll-theme"
+    - subtitle: "Contact Me"
+      subhref: "/pages/contact-me.html"
