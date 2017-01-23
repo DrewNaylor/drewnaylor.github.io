@@ -21,9 +21,9 @@
 - title: "Videos"
   href: "/pages/videos.html"
 
-- title: "Misc"
-  external-subcategories:
-    - subtitle: "Jekyll forums"
-      subhref: "https://talk.jekyllrb.com/"
+- title: "More..."
+  subcategories:
+    - subtitle: "Links"
+      subhref: "/pages/links.html"
     - subtitle: "Source Code"
       subhref: "https://github.com/chrisanthropic/slim-pickins-jekyll-theme"
