@@ -9,6 +9,7 @@ description: > # this means to ignore newlines until "baseurl:"
 
 baseurl: https://drew-naylor.com
 url: https://drew-naylor.com
+enforce_ssl: drew-naylor.com
 
 header: yes
 header_sm: images/banner-small.jpg
