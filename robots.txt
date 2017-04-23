@@ -1,3 +1,9 @@
+---
+
+sitemap: false
+
+---
+
 Sitemap: https://drew-naylor.com/sitemap.xml
 
 User-agent: *
