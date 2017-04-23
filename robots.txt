@@ -19,7 +19,7 @@ User-agent: *
 Disallow: /pages/test-page.html
 
 User-agent: *
-Disallow: /test-new-sitemap-listing
+Disallow: /pages/test-new-sitemap-listing
 
 User-agent: *
-Disallow: /test-new-sitemap-listing.html
+Disallow: /pages/test-new-sitemap-listing.html
