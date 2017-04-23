@@ -7,7 +7,7 @@ sitemap: false
   {% capture site_url %}{% if site.url %}{{ site.url | append: site.baseurl }}{% else %}{{ site.github.url }}{% endif %}{% endcapture %}
   {% for post in site.posts %}{% unless post.sitemap == false %}
   <url>
-    <loc>{{ post.url | prepend: site_url | uri_escape }}</loc>
+    <loc>{{ post.url | uri_escape }}</loc>
     {% if post.last_modified_at %}
     <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
     {% else %}
@@ -17,7 +17,7 @@ sitemap: false
   {% endunless %}{% endfor %}
   {% for page in site.html_pages %}{% unless page.sitemap == false %}
   <url>
-    <loc>{{ page.url | replace:'/index.html','/' | prepend: site_url | uri_escape }}</loc>
+    <loc>{{ page.url | replace:'/index.html','/' | uri_escape }}</loc>
     {% if page.last_modified_at %}
     <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
     {% endif %}
