@@ -30,7 +30,7 @@ kramdown:
 destination: _site
 
 gems:
-  # - jekyll-sitemap
+
   
 # Compress our Css
 #sass:
