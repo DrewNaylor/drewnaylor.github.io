@@ -7,13 +7,19 @@ sitemap: false
 Sitemap: https://drew-naylor.com/sitemap.xml
 
 User-agent: *
+Disallow: /404
+
+User-agent: *
 Disallow: /404.html
 
 User-agent: *
 Disallow: /pages/test-page
 
-User-agent: Adsbot-Google
-Disallow: /404.html
+User-agent: *
+Disallow: /pages/test-page.html
 
-User-agent: Adsbot-Google
-Disallow: /pages/test-page
+User-agent: *
+Disallow: /test-new-sitemap-listing
+
+User-agent: *
+Disallow: /test-new-sitemap-listing.html
