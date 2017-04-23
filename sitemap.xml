@@ -23,28 +23,4 @@ sitemap: false
     {% endif %}
   </url>
   {% endunless %}{% endfor %}
-  {% for collection in site.collections %}{% unless collection.last.output == false or collection.output == false %}
-  {% for doc in collection.last.docs %}{% unless doc.sitemap == false %}
-  <url>
-    <loc>{{ doc.url | replace:'/index.html','/' | prepend: site_url | uri_escape }}</loc>
-    {% if doc.last_modified_at %}
-    <lastmod>{{ doc.last_modified_at | date_to_xmlschema }}</lastmod>
-    {% endif %}
-  </url>
-  {% endunless %}{% endfor %}
-  {% for doc in collection.docs %}{% unless doc.sitemap == false %}
-    <url>
-      <loc>{{ doc.url | replace:'/index.html','/' | prepend: site_url | uri_escape }}</loc>
-      {% if doc.last_modified_at %}
-      <lastmod>{{ doc.last_modified_at | date_to_xmlschema }}</lastmod>
-      {% endif %}
-    </url>
-  {% endunless %}{% endfor %}
-  {% endunless %}{% endfor %}
-  {% for file in site.html_files %}
-  <url>
-    <loc>{{ file.path | prepend: site_url | uri_escape }}</loc>
-    <lastmod>{{ file.modified_time | date_to_xmlschema }}</lastmod>
-  </url>
-  {% endfor %}
 </urlset>
