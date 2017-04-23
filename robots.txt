@@ -1,0 +1,7 @@
+Sitemap: https://drew-naylor.com/sitemap.xml
+
+User-agent: *
+Disallow: /404.html
+
+User-agent: *
+Disallow: /pages/test-page
