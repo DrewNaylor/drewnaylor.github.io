@@ -5,3 +5,9 @@ Disallow: /404.html
 
 User-agent: *
 Disallow: /pages/test-page
+
+User-agent: Adsbot-Google
+Disallow: /404.html
+
+User-agent: Adsbot-Google
+Disallow: /pages/test-page
