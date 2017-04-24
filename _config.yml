@@ -12,7 +12,6 @@ url: https://drew-naylor.com
 enforce_ssl: drew-naylor.com
 
 header: yes
-header_sm: banners/Drew-Naylors-Website_banner-Medium.jpg
 header_med: banners/Drew-Naylors-Website_banner-Medium.jpg
 header_large: banners/Drew-Naylors-Website_banner-Large.jpg
 header_xl: banners/Drew-Naylors-Website_banner-XL.jpg
