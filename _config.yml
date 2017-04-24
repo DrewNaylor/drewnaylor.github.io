@@ -12,10 +12,10 @@ url: https://drew-naylor.com
 enforce_ssl: drew-naylor.com
 
 header: yes
-header_sm: banners/Drew-Naylors-Website_banner-Small.jpg
-header_med: banners/Drew-Naylors-Website_banner-Medium.jpg
-header_large: banners/Drew-Naylors-Website_banner-Large.jpg
-header_xl: banners/Drew-Naylors-Website_banner-XL.jpg
+header_sm: images/banners/Drew-Naylors-Website_banner-Small.jpg
+header_med: images/banners/Drew-Naylors-Website_banner-Medium.jpg
+header_large: images/banners/Drew-Naylors-Website_banner-Large.jpg
+header_xl: images/banners/Drew-Naylors-Website_banner-XL.jpg
 
 
 # Exclude our ruby stuff
