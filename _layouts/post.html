@@ -17,7 +17,9 @@ layout: default
 		  <hr>
 		  <br>
 
-		  
+		  {% if page.comments %}
+		  {% include disqus.html %}		  
+		  {% endif %}
 </section>
 	
 	{% include asides/recent_posts.html %}
