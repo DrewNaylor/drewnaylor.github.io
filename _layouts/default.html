@@ -6,6 +6,11 @@
       {% include header.html %}
       {% include navigation.html %}
       {{ content }}
+	  
+	  	  {% if page.comments %}
+		  <section id="disqus_thread"></section>
+		  {% include disqus.html %}		  
+		  {% endif %}
     </main>
       {% include footer.html %}
   </body>
