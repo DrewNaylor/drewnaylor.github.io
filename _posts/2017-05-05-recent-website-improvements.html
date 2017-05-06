@@ -123,37 +123,9 @@ sitemap:
 
 <p>Also, here's the code for my "post.html" template:
 
-<code>
----
-layout: default
----
+<a href="https://github.com/DrewNaylor/drewnaylor.github.io/blob/master/_layouts/post.html" target=_blank>Post.html</a>
 
-
-<div class="row">
-<section class="small-12 large-8 columns page-content">
-    <header class="post-header">
-      <h1 class="post-title">{{ page.title }}</h1>
-      <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-    </header>
-	
-
-          {{ content }}
-
-		  <br>
-		  <hr>
-		  <br>
-
-		  {% if page.comments %}
-		  {% include disqus.html %}		  
-		  {% endif %}
-</section>
-	
-	{% include asides/recent_posts.html %}
-
-</div>
-</code>
-
-Go ahead and use that template if you want to. I tweaked it a bunch from the default that came with Slim Pickens.</p>
+Go ahead and use that template if you want to. I tweaked it a bunch from the default that came with Slim Pickens. I had to link to it or else this page would get messed up.</p>
 
 <p>I added Disqus successfully on Saturday, May 6, 2017, at 3 AM EDT. Goodnight.</p>
 
