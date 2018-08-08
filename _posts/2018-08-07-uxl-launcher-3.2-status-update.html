@@ -1,0 +1,23 @@
+---
+layout: post
+title: "UXL Launcher Version 3.2 Status Update"
+comments: true
+id: 2018-08-07-uxl-launcher-3.2-status-update
+date: 2018-08-07T01:01:01-08:00
+sitemap:
+  lastmod: 2018-08-07T01:01:01-08:00
+  priority: 0.5
+  changefreq: monthly
+  exclude: 'no'
+---
+
+<p>It's been a little while since the last commit to the <a href="https://github.com/DrewNaylor/UXL-Launcher" target=_blank>UXL Launcher repository</a>, so I figured that I'd post an update on the status of the next version.
+</p>
+
+<p>Right now, most of the work is done and all I'm doing is waiting for Microsoft to release either a consumer/release preview of Office 2019, or for the final version of Office 2019 to be released. Once that's available, I'll be able to test out Office 2019 and see where it installs its files to. After testing it, if necessary, changes will be made to the "Office Locater" code (and other related code) to support Office 2019. Otherwise, I'll just add "Microsoft Office 2019" to the list of Office versions in the Options window and add its version number (currently assumed to be "17" if Microsoft keeps using their current pattern starting with Office 2010 being "14") to the list of officially-supported Office versions located in the application resources.</p>
+
+<p>If you want to test out Office 2019 support and Microsoft <b>does</b> have Office 2019 install to "C:\Program Files (x86)\Microsoft Office\root\Office17\" (there might not be an ("x86") after "Program Files" on 32-bit computers or computers with 64-bit Office), you can actually use a <a href="https://ci.appveyor.com/project/DrewNaylor/uxl-launcher/build/uxl_launcher-appveyor-ci-build_PotentialOffice2019Support-branch_build385/artifacts" target=_blank>precompiled version of UXL Launcher built from a different branch</a> rather than the main one that has a customized config file for things specific to Office 2019. Be sure to read the text near the top of the page as it has important information regarding saving your settings. To download this build, on the Appveyor page, click the filename ("UXL-Launcher\buildzip-uxl_launcher-appveyor.zip") and save it somewhere you can easily access, then extract the entire archive to a folder that you can easily remember.</p>
+
+<p>Please be aware that using the build linked above might overwrite your current settings if you save them while having the Office version set to "Office17" and saving your settings.</p>
+
+<p>Lastly, if you want to see the things that have been worked on during the development of version 3.2, you can refer to the <a href="https://github.com/DrewNaylor/UXL-Launcher/milestone/3?closed=1" target=_blank>closed issues in the Version 3.2 milestone</a> and the <a href="https://github.com/DrewNaylor/UXL-Launcher/compare/v3.1...master">code comparison between v3.1 and master</a>. If you would like to download a stable version of UXL Launcher, <a href="https://github.com/DrewNaylor/UXL-Launcher/releases/tag/v3.1" target=_blank>UXL Launcher Version 3.1 Stable was released on July 10, 2018</a>.</p>
