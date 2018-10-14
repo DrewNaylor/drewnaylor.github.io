@@ -5,11 +5,13 @@ comments: true
 id: 2018-08-07-uxl-launcher-3.2-status-update
 date: 2018-08-07T01:01:01-08:00
 sitemap:
-  lastmod: 2018-08-07T01:01:01-08:00
+  lastmod: 2018-10-14T01:01:01-08:00
   priority: 0.5
   changefreq: monthly
   exclude: 'no'
 ---
+
+<p><b>Update 10-14-2018:</b> There's now official support for Office 2019 in UXL Launcher, and the "PotentialOffice2019Support" branch has been updated with the new code. You can download the new build <a href="https://ci.appveyor.com/project/DrewNaylor/uxl-launcher/builds/19492211/artifacts" target=_blank>from AppVeyor</a>. (UXL Launcher is not endorsed by AppVeyor.) The original blog post is below.</p>
 
 <p>It's been a little while since the last commit to the <a href="https://github.com/DrewNaylor/UXL-Launcher" target=_blank>UXL Launcher repository</a>, so I figured that I'd post an update on the status of the next version.
 </p>
@@ -21,3 +23,40 @@ sitemap:
 <p>Please be aware that using the build linked above might overwrite your current settings if you save them while having the Office version set to "Office17" and saving your settings.</p>
 
 <p>Lastly, if you want to see the things that have been worked on during the development of version 3.2, you can refer to the <a href="https://github.com/DrewNaylor/UXL-Launcher/milestone/3?closed=1" target=_blank>closed issues in the Version 3.2 milestone</a> and the <a href="https://github.com/DrewNaylor/UXL-Launcher/compare/v3.1...master">code comparison between v3.1 and master</a>. If you would like to download a stable version of UXL Launcher, <a href="https://github.com/DrewNaylor/UXL-Launcher/releases/tag/v3.1" target=_blank>UXL Launcher Version 3.1 Stable was released on July 10, 2018</a>.</p>
+
+<h2>Commit message archive</h2>
+
+I decided on 10-14-2018 to archive the commit messages from this branch.
+
+<h3>Modify config file for possible Office 2019 support <a href="https://github.com/DrewNaylor/UXL-Launcher/commit/cdf4d189cc91e171cb1515934784e05aabf8628a" target=_blank>cdf4d189</a> August 1, 2018</h3>
+<pre>
+<code>This branch exists in case Microsoft suddenly releases Office 2019 and
+people want to test out Office 2019 support with UXL Launcher. The only
+changes in this branch exist in the config file. This branch will be
+deleted after Version 3.2 Stable is released.
+
+This may or may not work, depending on if Microsoft changes where Office
+is installed to for Office 2019.
+
+List of changes in this branch:
+- Office 365 compatibility has been enabled
+- The Office version has been set to Office17, since that's what the
+Office 2019 version number is assumed to be (unless Microsoft does
+something different from what they've been doing)
+- Debug labels have been turned off.
+
+For the most part, there shouldn't be any major bugs at this point and
+the rest of Version 3.2's development, as of right now, will mostly be
+making Office 2019 show up in the Options window and have it be
+officially supported.
+
+Because Office 2019 isn't officially supported yet, it'll show up in the
+Options window as "Office17" in the version dropdown box.
+
+If you change your version to something else (or click the "Defaults"
+button) and save your changes, you'll have to delete your personal
+settings folder for UXL Launcher under
+"C:\Users\(username)\AppData\Local\UXL_Launcher\UXL-Launcher.exe_Url_(characters)",
+where "(username)" is your own computer username and "(characters)" is a
+long string of alphanumeric characters.</code>
+</pre>
