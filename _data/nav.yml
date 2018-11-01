@@ -24,7 +24,7 @@
 - title: "More..."
   subcategories:
     - subtitle: "Archived pages and projects"
-	  subref: "/pages/old-project-sites/archive.html"
+	  subhref: "/pages/old-project-sites/archive.html"
     - subtitle: "Links"
       subhref: "/pages/links.html"
     - subtitle: "Contact Me"
