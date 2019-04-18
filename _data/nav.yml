@@ -29,7 +29,7 @@
       subhref: "https://github.com/drewnaylor/hidesettingspages"
     - subtitle: "thumbsget"
       subhref: "https://github.com/drewnaylor/thumbsget"
-	- subtitle: "applauncher-icons"
+    - subtitle: "applauncher-icons"
       subhref: "https://github.com/drewnaylor/applauncher-icons"
     # - subtitle: "UXL Launcher"
       # subhref: "/pages/projects/uxl-launcher.html"
@@ -37,7 +37,7 @@
       # subhref: "/pages/projects/hidesettingspages.html"
     # - subtitle: "thumbsget"
       # subhref: "/pages/projects/thumbsget.html"
-	# - subtitle: "applauncher-icons"
+    # - subtitle: "applauncher-icons"
       # subhref: "/pages/projects/applauncher-icons.html"
 
 - title: "More..."
