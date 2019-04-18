@@ -21,16 +21,8 @@
 - title: "Videos"
   href: "/pages/videos.html"
   
-- title: "Projects"
-  subcategories:
-    - subtitle: "UXL Launcher"
-      href: "https://github.com/drewnaylor/uxl-launcher"
-    - subtitle: "HideSettingsPages"
-      href: "https://github.com/drewnaylor/hidesettingspages"
-    - subtitle: "thumbsget"
-      href: "https://github.com/drewnaylor/thumbsget"
-    - subtitle: "applauncher-icons"
-      href: "https://github.com/drewnaylor/applauncher-icons"
+# - title: "Projects"
+  # subcategories:
     # - subtitle: "UXL Launcher"
       # subhref: "/pages/projects/uxl-launcher.html"
     # - subtitle: "HideSettingsPages"
