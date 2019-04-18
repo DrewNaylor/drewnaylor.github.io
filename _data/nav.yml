@@ -8,6 +8,7 @@
   href: "/blog/"
   
 - title: "Rom Hacking"
+  href: "/pages/test-page.html"
   subcategories:
     - subtitle: "Cheat Codes"
       subhref: "/pages/rom-hacking-pages/cheat-codes.html"
