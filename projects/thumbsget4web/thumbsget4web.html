@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>thumbsget4web</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Some parts of this JS were based on this
+        // SO answer:
+        // https://stackoverflow.com/a/11219605
+        // Most of the code in the getThumbnailUrl()
+        // function was copied over from the
+        // Windows Forms version of thumbsget and was
+        // modified for working with JavaScript.
+
+        function previewThumbnail() {
+            // This is used to preview the thumbnail in
+            // the image box below the controls.
+
+            var thumbnailPreviewBox = document.getElementById("thumbnailImageBox");
+            thumbnailPreviewBox.src = getThumbnailUrl();
+        }
+
+        function saveThumbnail() {
+            // This is used to open the thumbnail in a new tab.
+            // We can't download the image directly since most
+            // browsers block cross-domain download requests.
+            window.open(getThumbnailUrl(), '_blank');
+
+        }
+
+        function getThumbnailUrl() {
+            // First we need to define the image box so we can set
+            // the preview in it.
+            var thumbnailUrl = new String(document.getElementById("video_url").value);
+
+            // Next, we need to make sure there's stuff in the textbox.
+            if (thumbnailUrl.length > 0)
+            // Now we can do stuff and replace text.
+            {
+                // Look at the URL, and replace "www.youtube.com/watch?v=" with "i.ytimg.com/vi/".
+                // Actually, first replace "www." with "" (nothing).
+                console.info("Start:");
+                console.info("Current URL: " + thumbnailUrl);
+
+                // Replace "www." with nothing.
+                thumbnailUrl = thumbnailUrl.replace("www.", "");
+                console.info("Replace www. Current URL: " + thumbnailUrl);
+
+                // Replace "m." with nothing.
+                thumbnailUrl = thumbnailUrl.replace("m.", "");
+                console.info("Replace m. Current URL: " + thumbnailUrl);
+
+                // Replace "?feature=youtu.be" with nothing.
+                thumbnailUrl = thumbnailUrl.replace("?feature=youtu.be", "");
+                console.info("Replace ?feature=youtu.be. Current URL: " + thumbnailUrl);
+
+                // Replace "&feature=youtu.be" with nothing.
+                thumbnailUrl = thumbnailUrl.replace("&feature=youtu.be", "");
+                console.info("Replace &feature=youtu.be. Current URL: " + thumbnailUrl);
+
+                // Replace "&feature=share" with nothing.
+                thumbnailUrl = thumbnailUrl.replace("&feature=share", "");
+                console.info("Replace &feature=share. Current URL: " + thumbnailUrl);
+
+                // Now, if "youtube.com/watch?" is in the URL, replace it and "v=" with "i.ytimg.com/vi/".
+                if (thumbnailUrl.includes("youtube.com/watch?"))
+                {
+                thumbnailUrl = thumbnailUrl.replace("youtube.com/watch?v=", "i.ytimg.com/vi/");
+                console.info("Replace youtube.com/watch?v=. Current URL: " + thumbnailUrl);
+                } 
+                else if (thumbnailUrl.includes("youtu.be/"))
+                    {
+
+                // If the URL contains "youtu.be/", replace that with "i.ytimg.com/vi/".
+                thumbnailUrl = thumbnailUrl.replace("youtu.be/", "i.ytimg.com/vi/");
+                console.info("Replace youtu.be. Current URL: " + thumbnailUrl);
+                    }
+                // Replace "watch" with nothing.
+                thumbnailUrl = thumbnailUrl.replace("watch", "");
+                console.info("Replace watch. Current URL: " + thumbnailUrl);
+
+                // Replace "&v=" with nothing.
+                thumbnailUrl = thumbnailUrl.replace("&v=", "");
+                console.info("Replace &v=. Current URL: " + thumbnailUrl);
+
+                // Once again, replace "youtube.com/" with "i.ytimg.com/vi/".
+                thumbnailUrl = thumbnailUrl.replace("youtube.com/", "i.ytimg.com/vi/");
+                console.info("Replace youtube.com/. Current URL: " + thumbnailUrl);
+
+                // Add "maxresdefault.jpg" to end of URL.
+                thumbnailUrl = thumbnailUrl + "/maxresdefault.jpg"
+                console.info("Append /maxresdefault.jpg. Current URL: " + thumbnailUrl);
+
+                // Return the thumbnail URL if the textbox isn't empty and onlyReturnVideoID
+                return thumbnailUrl
+            } else
+                {
+
+            // If the textbox for the video URL is empty, just return the thumbnail of
+            // one of my Luigi's Mansion episodes.
+            return "https://i.ytimg.com/vi/kK7TJIMab7g/maxresdefault.jpg"
+                }
+            }
+
+
+
+        function showAboutMessage() {
+            // This shows the about message for thumbsget4web.
+            alert("About thumbsget4web:" + "\n" +
+                "\n" +
+                "thumbsget4web" + "\n" +
+                "Version 0.1.0.0" + "\n" +
+                "Gets the maxresdefault thumbnail for YouTube videos from original video URL. Not associated with YouTube or Google." + "\n" +
+                "Copyright © 2019 Drew Naylor. Licensed under the Gnu GPL v3+." + "\n" +
+"\n" +
+                "thumbsget4web is a port of thumbsget to a webpage." + "\n" +
+                "You can get the code for thumbsget from:" + "\n" +
+                "https://github.com/DrewNaylor/thumbsget/" + "\n" +
+"\n" +
+                "Below is part of the Gnu GPLv3+ as it applies to thumbsget" + "\n" +
+                "Visit http://www.gnu.org/licenses/gpl.html for the full license." + "\n" +
+"\n" +
+                "thumbsget is free software: you can redistribute it and/or modify" + "\n" +
+                "it under the terms of the GNU General Public License as published by" + "\n" +
+                "the Free Software Foundation, either version 3 of the License, or" + "\n" +
+                "(at your option) any later version." + "\n" +
+"\n" +
+                "thumbsget is distributed in the hope that it will be useful," + "\n" +
+                "but WITHOUT ANY WARRANTY; without even the implied warranty of" + "\n" +
+                "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the" + "\n" +
+                "GNU General Public License for more details." + "\n" +
+                "Copyright notice: YouTube and all related words and" + "\n" +
+                "trademarks/registered trademarks owned by Google/Alphabet in the United States" + "\n" +
+                "and/or other countries are Copyright 2019 Google/Alphabet. All" + "\n" +
+                "Rights Reserved to Google/Alphabet for Google/Alphabet's copyrights, trademarks," + "\n" +
+                "and registered trademarks." + "\n" +
+                "Any other companies mentioned own their respective copyrights/trademarks." + "\n" +
+"\n" +
+                "Google/Alphabet is not affiliated with either the thumbsget project or" + "\n" +
+                "Drew Naylor and does not endorse this software.");
+        }
+        </script>
+
+   <form>
+    <label for:"video_url">Video URL:</label> <input type="text" id="video_url">
+    <br>
+    <br>
+    <input type="button" onclick="saveThumbnail()" value="View thumbnail in new tab">
+    <br>
+    <input type="button" onclick="previewThumbnail()" value="Preview thumbnail"> 
+   </form>
+    <br>
+   <img id="thumbnailImageBox" height="240" src="">
+    <br>
+    <br>
+
+    <a href="javascript:showAboutMessage()">About thumbsget4web</a>
+    
+
+    <noscript><p>JavaScript is required to use thumbsget4web. <br> If you don't want to enable JavaScript, 
+    you can <a href="https://github.com/DrewNaylor/thumbsget/" target="_blank">use the desktop version
+    of thumbsget</a> instead. <br>
+    Please note that the desktop version only officially runs on Windows at the current time.</p>
+    </noscript>
+</body>
+</html>
