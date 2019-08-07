@@ -13,12 +13,6 @@ User-agent: *
 Disallow: /404.html
 
 User-agent: *
-Disallow: /pages/test-page
-
-User-agent: *
-Disallow: /pages/test-page.html
-
-User-agent: *
 Disallow: /pages/test-new-sitemap-listing
 
 User-agent: *
