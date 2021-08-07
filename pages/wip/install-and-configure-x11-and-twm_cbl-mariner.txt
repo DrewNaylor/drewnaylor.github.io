@@ -9,8 +9,11 @@ After installing Xorg Server from coreui repo as shown in part 2:
     I. Make a new folder to keep everything in its own area: <code>mkdir x11-installing</code> (or whatever you want the folder to be; "x11-installing" is just an example)
 	II. CD into the folder you made.
 	III. Download the package by running <code>wget https://www.x.org/pub/individual/driver/xf86-video-vmware-13.3.0.tar.bz2</code>
-    IV. Compile it
-    V. Install it
+    IV. Extract the package by running <code>tar -xvjf xf86-video-vmware-13.3.0.tar.bz2</code>
+	V. CD into "xf86-video-vmware-13.3.0"
+	V. Compile it by running <code>./configure</code>, then <code>make</code>
+	- For some reason, "./configure" complains that it can't find the "xorg-server" package, even though it's already installed.
+    VI. Install it
   B. "drm"
     - There are some DRM packages mentioned in the coreui repo, so some might work.
   C. "mesa"
