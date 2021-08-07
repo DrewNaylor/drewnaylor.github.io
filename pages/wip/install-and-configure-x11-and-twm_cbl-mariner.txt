@@ -11,7 +11,14 @@ After installing Xorg Server from extras-ui repo as shown in part 2:
   - Not sure about the exact package names
 3. Install VMware/X11 mouse drivers so the mouse works in X11.
 4. Install "twm" (https://www.linuxfromscratch.org/blfs/view/systemd/x/twm.html)
+  A. Download this package: https://www.x.org/pub/individual/app/twm-1.0.11.tar.xz
+  B. Compile it
+  C. Install it
 5. Install "xterm" (https://www.linuxfromscratch.org/blfs/view/systemd/x/xterm.html)
+  A. Download this package: https://invisible-mirror.net/archives/xterm/xterm-368.tgz
+  B. Compile it
+  C. Install it
+  D. You also need a monospace TTF or OTF font to run xterm, such as Dejavu fonts: https://www.linuxfromscratch.org/blfs/view/systemd/x/TTF-and-OTF-fonts.html#dejavu-fonts
 6. Install "Xinit" (https://www.linuxfromscratch.org/blfs/view/systemd/x/xinit.html)
   A. Download this package: https://www.x.org/pub/individual/app/xinit-1.4.1.tar.bz2
   B. Compile it
