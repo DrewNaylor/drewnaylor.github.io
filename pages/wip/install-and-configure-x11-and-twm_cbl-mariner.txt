@@ -10,8 +10,11 @@ After installing Xorg Server from coreui repo as shown in part 2:
     II. Compile it
     III. Install it
   B. "drm"
+    - There are some DRM packages mentioned in the coreui repo, so some might work.
   C. "mesa"
+    - Mesa packages exist in the coreui repo, so they might work. Not sure which ones to use, though.
   D. "vmwgfx"
+    - May require installing based on LFS instructions.
   - DRM and Mesa might auto-install alongside Xorg Server
   - Not sure about the exact package names
 3. Install VMware/X11 mouse drivers so the mouse works in X11.
