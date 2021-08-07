@@ -4,6 +4,9 @@ This page is a work in progress and will become its own blog post for easier ref
 
 After installing Xorg Server from coreui repo as shown in part 2:
 
+0. Install development packages
+  A. "xorg-x11-server-devel" (https://bbs.archlinux.org/viewtopic.php?id=121647)
+  B. "libXext-devel"
 1. Install graphics drivers
   A. "xf86-video-vmware" since we're using VMware, though the instructions should work for other X11 drivers (https://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html#xorg-vmware-driver)
     I. Make a new folder to keep everything in its own area: <code>mkdir x11-installing</code> (or whatever you want the folder to be; "x11-installing" is just an example)
