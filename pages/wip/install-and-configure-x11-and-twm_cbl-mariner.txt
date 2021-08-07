@@ -10,7 +10,9 @@ After installing Xorg Server from extras-ui repo as shown in part 2:
   - These might auto-install alongside Xorg Server
   - Not sure about the exact package names
 3. Install VMware/X11 mouse drivers so the mouse works in X11.
-4. Install "Xinit" (https://www.linuxfromscratch.org/blfs/view/systemd/x/xinit.html)
+4. Install "twm" (https://www.linuxfromscratch.org/blfs/view/systemd/x/twm.html)
+5. Install "xterm" (https://www.linuxfromscratch.org/blfs/view/systemd/x/xterm.html)
+6. Install "Xinit" (https://www.linuxfromscratch.org/blfs/view/systemd/x/xinit.html)
   A. Download this package: https://www.x.org/pub/individual/app/xinit-1.4.1.tar.bz2
   B. Compile it
   C. Install it
