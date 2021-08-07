@@ -7,8 +7,12 @@ After installing Xorg Server from coreui repo as shown in part 2:
 0. Install development packages so that we can build the X11 drivers
   A. "xorg-x11-server-devel" (https://bbs.archlinux.org/viewtopic.php?id=121647)
   B. "libXext-devel"
-1. Install graphics drivers
-  A. "xf86-video-vmware"/"vmwgfx" since we're using VMware, though the instructions should work for other X11 drivers (https://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html#xorg-vmware-driver)
+1. Install graphics drivers/packages
+  A. "mesa"
+    I. It appears that "mesa-dri-drivers" is the package to install.
+    B. "drm"
+    I. There are some DRM packages mentioned in the coreui repo, so some might work. Not sure which ones, so I'll have to figure that out.
+  C. "xf86-video-vmware"/"vmwgfx" since we're using VMware, though the instructions should work for other X11 drivers (https://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html#xorg-vmware-driver)
     I. Make a new folder to keep everything in its own area: <code>mkdir x11-installing</code> (or whatever you want the folder to be; "x11-installing" is just an example)
     II. CD into the folder you made.
     III. Download the package by running <code>wget https://www.x.org/pub/individual/driver/xf86-video-vmware-13.3.0.tar.bz2</code>
@@ -21,11 +25,6 @@ After installing Xorg Server from coreui repo as shown in part 2:
 	X. Add vmwgfx to the /etc/modules file by running <code>echo vmwgfx | sudo tee -a /etc/modules</code>
 	XI. Try to load the kernel module by running <code>sudo modprobe vmwgfx</code>
 	XII. Type <code>sudo dmesg</code> to watch the dmesg output to see if there are any lines prefixed with [vmwgfx], which there should be. You may need to pipe it into grep and filter for "vmwgfx".
-  B. "drm"
-    - There are some DRM packages mentioned in the coreui repo, so some might work.
-  C. "mesa"
-    - Mesa packages exist in the coreui repo, so they might work. Not sure which ones to use, though.
-	- "mesa-dri-drivers" may be the package to install.
   - DRM and Mesa might auto-install alongside Xorg Server
   - Not sure about the exact package names
 3. Install VMware/X11 mouse drivers so the mouse works in X11.
