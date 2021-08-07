@@ -16,9 +16,11 @@ After installing Xorg Server from coreui repo as shown in part 2:
 	V. CD into "xf86-video-vmware-13.3.0"
     VI. Compile it by running <code>./configure</code>, then <code>make</code>
     VII. Install it by running <code>sudo make install</code>
-	VIII. Run <code>sudo depmod -a</code> (https://mesa-docs.readthedocs.io/en/latest/vmware-guest.html)
+	VIII. Run <code>sudo depmod -a</code> (this and the next few instructions are from https://mesa-docs.readthedocs.io/en/latest/vmware-guest.html)
 	IX. Run <code>sudo dracut --force</code> to update the initramfs
 	X. Add vmwgfx to the /etc/modules file by running <code>echo vmwgfx | sudo tee -a /etc/modules</code>
+	XI. Try to load the kernel module by running <code>sudo modprobe vmwgfx</code>
+	XII. Type <code>sudo dmesg</code> to watch the dmesg output to see if there are any lines prefixed with [vmwgfx], which there should be. You may need to pipe it into grep and filter for "vmwgfx".
   B. "drm"
     - There are some DRM packages mentioned in the coreui repo, so some might work.
   C. "mesa"
