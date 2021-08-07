@@ -4,12 +4,15 @@ This page is a work in progress and will become its own blog post for easier ref
 
 After installing Xorg Server from extras-ui repo as shown in part 2:
 
-1. Install "xf86-video-vmware" (https://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html#xorg-vmware-driver)
-  A. Download the package: https://www.x.org/pub/individual/driver/xf86-video-vmware-13.3.0.tar.bz2
-  B. Compile it
-  C. Install it
-2. Install "drm", "mesa", and "vmwgfx"
-  - These might auto-install alongside Xorg Server
+1. Install graphics drivers
+  A. "xf86-video-vmware" (https://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html#xorg-vmware-driver)
+    I. Download the package: https://www.x.org/pub/individual/driver/xf86-video-vmware-13.3.0.tar.bz2
+    II. Compile it
+    III. Install it
+  B. "drm"
+  C. "mesa"
+  D. "vmwgfx"
+  - DRM and Mesa might auto-install alongside Xorg Server
   - Not sure about the exact package names
 3. Install VMware/X11 mouse drivers so the mouse works in X11.
 4. Install "twm" (https://www.linuxfromscratch.org/blfs/view/systemd/x/twm.html)
