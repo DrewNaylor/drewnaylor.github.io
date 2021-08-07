@@ -4,19 +4,18 @@ This page is a work in progress and will become its own blog post for easier ref
 
 After installing Xorg Server from coreui repo as shown in part 2:
 
-0. Install development packages
+0. Install development packages so that we can build the X11 drivers
   A. "xorg-x11-server-devel" (https://bbs.archlinux.org/viewtopic.php?id=121647)
   B. "libXext-devel"
 1. Install graphics drivers
   A. "xf86-video-vmware" since we're using VMware, though the instructions should work for other X11 drivers (https://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html#xorg-vmware-driver)
     I. Make a new folder to keep everything in its own area: <code>mkdir x11-installing</code> (or whatever you want the folder to be; "x11-installing" is just an example)
-	II. CD into the folder you made.
-	III. Download the package by running <code>wget https://www.x.org/pub/individual/driver/xf86-video-vmware-13.3.0.tar.bz2</code>
+    II. CD into the folder you made.
+    III. Download the package by running <code>wget https://www.x.org/pub/individual/driver/xf86-video-vmware-13.3.0.tar.bz2</code>
     IV. Extract the package by running <code>tar -xvjf xf86-video-vmware-13.3.0.tar.bz2</code>
 	V. CD into "xf86-video-vmware-13.3.0"
-	V. Compile it by running <code>./configure</code>, then <code>make</code>
-	- For some reason, "./configure" complains that it can't find the "xorg-server" package, even though it's already installed.
-    VI. Install it
+    VI. Compile it by running <code>./configure</code>, then <code>make</code>
+    VII. Install it by running <code>sudo make install</code>
   B. "drm"
     - There are some DRM packages mentioned in the coreui repo, so some might work.
   C. "mesa"
