@@ -16,6 +16,8 @@ After installing Xorg Server from coreui repo as shown in part 2:
 	V. CD into "xf86-video-vmware-13.3.0"
     VI. Compile it by running <code>./configure</code>, then <code>make</code>
     VII. Install it by running <code>sudo make install</code>
+	VIII. Run <code>sudo depmod -a</code> (https://mesa-docs.readthedocs.io/en/latest/vmware-guest.html)
+	IX. 
   B. "drm"
     - There are some DRM packages mentioned in the coreui repo, so some might work.
   C. "mesa"
