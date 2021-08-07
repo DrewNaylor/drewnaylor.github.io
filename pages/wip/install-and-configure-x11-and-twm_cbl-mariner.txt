@@ -1,5 +1,7 @@
 This page is a work in progress and will become its own blog post for easier reference. A lot of this information is thanks to Jonathan Pho's work, as linked in this comment thread: https://www.youtube.com/watch?v=0p5foo1INhk&lc=Ugxf35EMKFcHMBobHv94AaABAg
 
+<B>Note:</B> Jonathan Pho mostly used Linux From Scratch, but didn't use their "./configure" flags.
+
 After installing Xorg Server from extras-ui repo as shown in part 2:
 
 1. Install "xf86-video-vmware" (https://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html#xorg-vmware-driver)
@@ -23,3 +25,5 @@ After installing Xorg Server from extras-ui repo as shown in part 2:
   A. Download this package: https://www.x.org/pub/individual/app/xinit-1.4.1.tar.bz2
   B. Compile it
   C. Install it
+  
+After installing "Xinit", "startx" should now be installed, so you can use it to run X11.
