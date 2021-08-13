@@ -1,0 +1,44 @@
+This page is a work in progress and will become its own blog post for easier reference. A lot of this information is thanks to Jonathan Pho's work, as linked in this comment thread: https://www.youtube.com/watch?v=0p5foo1INhk&lc=Ugxf35EMKFcHMBobHv94AaABAg
+
+I'd also like to acknowledge NTDev's efforts in getting X11 to work on CBL-Mariner.
+
+<B>Note:</B> Jonathan Pho mostly used Linux From Scratch, but didn't use their "./configure" flags.
+
+
+1. Install X11/Xorg Server partially using the steps from Linux From Scratch: https://www.linuxfromscratch.org/blfs/view/svn/x/xorg-server.html
+  A. Run <code>sudo dnf install mariner-repos-ui</code> to add the coreui repo.
+  B. Install "pixman" and "pixman-devel" by running <code>sudo dnf install pixman pixman-devel</code>.
+  C. Install "libdrm" stuff by running <code>sudo dnf install libdrm libdrm-devel</code>
+  D. Install font-utils by running <code>sudo dnf install xorg-x11-font-utils</code>.
+  E. Install XKB.
+    I. Download the package by running <code>wget https://www.x.org/pub/individual/data/xkeyboard-config/xkeyboard-config-2.33.tar.bz2</code>
+	II. Extract the package by running <code>tar -xvjf xkeyboard-config-2.33.tar.bz2</code>
+	III. CD into xkeyboard-config-2.33
+	IV. Run <code>./configure --disable-runtime-deps</code>, <code>make</code>, and <code>sudo make install</code>.
+  F. Installing Xorg Server
+    I. Download the package by running <code>wget https://www.x.org/pub/individual/xserver/xorg-server-1.20.13.tar.xz</code>.
+	II. Extract the package by running <code>tar -xf xorg-server-1.20.13.tar.xz</code>.
+	III. CD into xorg-server-1.20.13.
+	IV. 
+5. Install graphics drivers/packages
+  A. "mesa"
+    I. It appears that "mesa-dri-drivers" is the package to install.
+  B. "drm"
+    I. There are some DRM packages mentioned in the coreui repo, so some might work. Not sure which ones, so I'll have to figure that out.
+
+6. Install "twm" (https://www.linuxfromscratch.org/blfs/view/systemd/x/twm.html)
+  A. Download this package: https://www.x.org/pub/individual/app/twm-1.0.11.tar.xz
+  B. Compile it
+  C. Install it
+7. Install "xterm" (https://www.linuxfromscratch.org/blfs/view/systemd/x/xterm.html)
+  A. Download this package: https://invisible-mirror.net/archives/xterm/xterm-368.tgz
+  B. Compile it
+  C. Install it
+  D. You also need a monospace TTF or OTF font to run xterm, such as Dejavu fonts: https://www.linuxfromscratch.org/blfs/view/systemd/x/TTF-and-OTF-fonts.html#dejavu-fonts
+  <b>Note:</b> "dejavu-sans-mono-fonts" is a package that exists in the "coreui" CBL-Mariner repo.
+8. Install "Xinit" (https://www.linuxfromscratch.org/blfs/view/systemd/x/xinit.html)
+  A. Download this package: https://www.x.org/pub/individual/app/xinit-1.4.1.tar.bz2
+  B. Compile it
+  C. Install it
+  
+After installing "Xinit", "startx" should now be installed, so you can use it to run X11.
