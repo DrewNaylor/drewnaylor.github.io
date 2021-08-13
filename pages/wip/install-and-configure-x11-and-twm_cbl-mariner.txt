@@ -7,17 +7,19 @@ I'd also like to acknowledge NTDev's efforts in getting X11 to work on CBL-Marin
 
 1. Install X11/Xorg Server partially using the steps from Linux From Scratch: https://www.linuxfromscratch.org/blfs/view/svn/x/xorg-server.html
   A. Run <code>sudo dnf install mariner-repos-ui</code> to add the coreui repo.
-  B. Pixman should already be installed. If not, install "pixman" by running <code>sudo dnf install pixman</code>.
-  C. Install font-utils by running <code>sudo dnf install xorg-x11-font-utils</code>.
-  D. Install XKB.
+  B. Install "pixman" and "pixman-devel" by running <code>sudo dnf install pixman pixman-devel</code>.
+  C. Install "libdrm" stuff by running <code>sudo dnf install libdrm libdrm-devel</code>
+  D. Install font-utils by running <code>sudo dnf install xorg-x11-font-utils</code>.
+  E. Install XKB.
     I. Download the package by running <code>wget https://www.x.org/pub/individual/data/xkeyboard-config/xkeyboard-config-2.33.tar.bz2</code>
 	II. Extract the package by running <code>tar -xvjf xkeyboard-config-2.33.tar.bz2</code>
 	III. CD into xkeyboard-config-2.33
 	IV. Run <code>./configure --disable-runtime-deps</code>, <code>make</code>, and <code>sudo make install</code>.
-  E. Installing Xorg Server
+  F. Installing Xorg Server
     I. Download the package by running <code>wget https://www.x.org/pub/individual/xserver/xorg-server-1.20.13.tar.xz</code>.
 	II. Extract the package by running <code>tar -xf xorg-server-1.20.13.tar.xz</code>.
 	III. CD into xorg-server-1.20.13.
+	IV. 
 5. Install graphics drivers/packages
   A. "mesa"
     I. It appears that "mesa-dri-drivers" is the package to install.
