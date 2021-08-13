@@ -3,6 +3,7 @@ This page is a work in progress and will become its own blog post for easier ref
 I'd also like to acknowledge NTDev's efforts in getting X11 to work on CBL-Mariner.
 
 <B>Note:</B> Jonathan Pho mostly used Linux From Scratch, but didn't use their "./configure" flags.
+<B>Note 2:</B> I can't seem to figure out how to get the required drivers installed, and I don't know if I'm doing things correctly.
 
 After installing Xorg Server from coreui repo as shown in part 2:
 
@@ -39,9 +40,10 @@ After installing Xorg Server from coreui repo as shown in part 2:
   - Not sure about the exact package names
 3. Install VMware/X11 mouse drivers so the mouse works in X11.
 4. Install "twm" (https://www.linuxfromscratch.org/blfs/view/systemd/x/twm.html)
-  A. Download this package: https://www.x.org/pub/individual/app/twm-1.0.11.tar.xz
-  B. Compile it
-  C. Install it
+  A. Download this package by running <code>wget https://www.x.org/pub/individual/app/twm-1.0.11.tar.xz</code>.
+  B. Extract it with <code>tar -xf twm-1.0.11.tar.xz</code>.
+  C. CD into "twm-1.0.11".
+  D. Install it by running <code>sed -i -e '/^rcdir =/s,^\(rcdir = \).*,\1/etc/X11/app-defaults,' src/Makefile.in</code>, <code>./configure</code>, <code>make</code>, <code>sudo make install</code>.
 5. Install "xterm" (https://www.linuxfromscratch.org/blfs/view/systemd/x/xterm.html)
   A. Download this package: https://invisible-mirror.net/archives/xterm/xterm-368.tgz
   B. Compile it
