@@ -15,8 +15,9 @@ I'd also like to acknowledge NTDev's efforts in getting X11 to work on CBL-Marin
 	III. CD into xkeyboard-config-2.33
 	IV. Run <code>./configure --disable-runtime-deps</code>, <code>make</code>, and <code>sudo make install</code>.
   E. Installing Xorg Server
-    I. Download the package by running <code>wget https://www.x.org/pub/individual/xserver/xorg-server-1.20.13.tar.xz</code>
-	II. 
+    I. Download the package by running <code>wget https://www.x.org/pub/individual/xserver/xorg-server-1.20.13.tar.xz</code>.
+	II. Extract the package by running <code>tar -xf xorg-server-1.20.13.tar.xz</code>.
+	III. CD into xorg-server-1.20.13.
 5. Install graphics drivers/packages
   A. "mesa"
     I. It appears that "mesa-dri-drivers" is the package to install.
