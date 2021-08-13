@@ -20,7 +20,8 @@ After installing Xorg Server from coreui repo as shown in part 2:
 	III. CD into "xf86-video-fbdev-0.5.0"
 	IV. Compile it by running <code>./configure</code>, then <code>make</code>
 	V. Install it by running <code>sudo make install</code>
-	VI. Run <code>sudo dnf install xorg-x11-server-Xvfb</code> to get the virtual framebuffer X server.
+	VI. Run <code>sudo dnf install xorg-x11-server-Xvfb</code> to get the virtual framebuffer X server installed.
+	VII. There should be a way to make it work, but I can't figure out how to run it.
   D. VMware Workstation: "xf86-video-vmware"/"vmwgfx" since we're using VMware, though the instructions should work for other X11 drivers; might end up giving up on installing this in VMware and just use Hyper-V, because this is really complicated and MESA-LOADER still can't find the correct driver. (https://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html#xorg-vmware-driver)
     I. Make a new folder to keep everything in its own area: <code>mkdir x11-installing</code> (or whatever you want the folder to be; "x11-installing" is just an example)
     II. CD into the folder you made.
