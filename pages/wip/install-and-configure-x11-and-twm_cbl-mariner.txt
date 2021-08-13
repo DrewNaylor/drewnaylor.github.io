@@ -44,6 +44,7 @@ After installing Xorg Server from coreui repo as shown in part 2:
   B. Extract it with <code>tar -xf twm-1.0.11.tar.xz</code>.
   C. CD into "twm-1.0.11".
   D. Install it by running <code>sed -i -e '/^rcdir =/s,^\(rcdir = \).*,\1/etc/X11/app-defaults,' src/Makefile.in</code>, <code>./configure</code>, <code>make</code>, <code>sudo make install</code>.
+  Note: When trying to do "./configure", it says that it can't find four packages: "xt", "xmu", "ice", and "sm". LFS didn't mention those, so I'm not sure what to do. I barely know how to install software from source, so this is way more complicated than what I can do.
 5. Install "xterm" (https://www.linuxfromscratch.org/blfs/view/systemd/x/xterm.html)
   A. Download this package: https://invisible-mirror.net/archives/xterm/xterm-368.tgz
   B. Compile it
