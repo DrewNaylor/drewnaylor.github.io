@@ -8,7 +8,7 @@ I'd also like to acknowledge NTDev's efforts in getting X11 to work on CBL-Marin
 1. Install X11 partially using the steps from Linux From Scratch: https://www.linuxfromscratch.org/blfs/view/svn/x/xorg-server.html
   A. Run <code>sudo dnf install mariner-repos-ui</code> to add the coreui repo.
   B. Pixman should already be installed. If not, install "pixman" by running <code>sudo dnf install pixman</code>.
-  C. 
+  C. Install font-utils by running <code>sudo dnf install xorg-x11-font-utils</code>.
 5. Install graphics drivers/packages
   A. "mesa"
     I. It appears that "mesa-dri-drivers" is the package to install.
