@@ -4,6 +4,8 @@ I'd also like to acknowledge NTDev's efforts in getting X11 to work on CBL-Marin
 
 <B>Note:</B> Jonathan Pho mostly used Linux From Scratch, but didn't use their "./configure" flags.
 <B>Note 2:</B> I can't seem to figure out how to get the required drivers installed, and I don't know if I'm doing things correctly.
+Update: Even though mesa was in the repos, I think I need to manually compile it to get the correct drivers:
+https://docs.mesa3d.org/drivers/svga3d.html
 
 After installing Xorg Server from coreui repo as shown in part 2:
 
@@ -13,6 +15,7 @@ After installing Xorg Server from coreui repo as shown in part 2:
 1. Install graphics drivers/packages
   A. "mesa"
     I. It appears that "mesa-dri-drivers" is the package to install.
+    II. Or maybe not, as it didn't seem to install what I needed, so I may need to compile mesa myself. See the update near the top of the page.
   B. "drm"
     I. There are some DRM packages mentioned in the coreui repo, so some might work. Not sure which ones, so I'll have to figure that out.
   C. Hyper-V: "xf86-video-fbdev" according to the Arch Wiki: https://wiki.archlinux.org/title/Hyper-V#Xorg (LFS instructions: https://www.linuxfromscratch.org/blfs/view/svn/x/x7driver.html#xorg-fbdev-driver)
