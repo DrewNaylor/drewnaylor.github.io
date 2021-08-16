@@ -1,11 +1,17 @@
 This page is a work in progress and will become its own blog post for easier reference. A lot of this information is thanks to Jonathan Pho's work, as linked in this comment thread: https://www.youtube.com/watch?v=0p5foo1INhk&lc=Ugxf35EMKFcHMBobHv94AaABAg
 
-I'd also like to acknowledge NTDev's efforts in getting X11 to work on CBL-Mariner.
+I'd also like to acknowledge NTDEV's efforts in getting X11 to work on CBL-Mariner.
 
 <B>Note:</B> Jonathan Pho mostly used Linux From Scratch, but didn't use their "./configure" flags.
 <B>Note 2:</B> I can't seem to figure out how to get the required drivers installed, and I don't know if I'm doing things correctly.
 Update: Even though mesa was in the repos, I think I need to manually compile it to get the correct drivers:
 https://docs.mesa3d.org/drivers/svga3d.html
+
+Turns out that some of the scripts for/from `./configure` and `autogen.sh` have to be modified as they try to put files into `/usr/local/lib` and `/usr/local/bin` instead of `/usr/lib` and `/usr/bin`, which prevents the build from working. Piping the `./configure` output to a file will show which flags need to be modified. The LFS ones cause issues.
+Additionally, there are instructions for building X11/Xorg here: https://www.x.org/wiki/Building_the_X_Window_System/ 
+And drivers from here: https://www.x.org/releases/X11R7.6/src/everything/
+Note that X11 7.7 is available, but I won't be using it because it apparently doesn't work with the install script.
+I'll be using Hyper-V instead of VMWare.
 
 After installing Xorg Server from coreui repo as shown in part 2:
 
