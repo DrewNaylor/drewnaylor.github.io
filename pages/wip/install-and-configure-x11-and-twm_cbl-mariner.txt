@@ -76,7 +76,7 @@ Scratch area:
   - Instructions for compiling X11 say to install "libgbm", but I didn't find it under that exact name. Rather, it was "mesa-libgbm". There's also "mesa-libgbm-devel", but I don't know if I need that one or not. Note that this package is in the "coreui" repo.
   - "autopoint" links to a page on "gettext". Not sure if they're the same thing, but "gettext" is mentioned in a different section.
   - "libmtdev" is listed as a package that needs to be installed, but "mtdev" appears to be the name. Didn't notice it was actually listed on the linked page until after doing a search for "mt" with dnf. This package requires the "coreui" repo.
-   - "libudev" appeared to be already installed, though it took a while to confirm it even though I assumed it was installed (the presence of "/lib/@libudev.so" and other similar filenames should confirm it's installed).
+  - "libudev" appeared to be already installed, though it took a while to confirm it even though I assumed it was installed (the presence of "/lib/@libudev.so" and other similar filenames should confirm it's installed).
   - You'll have to install one of the following cryptographic libraries, according to the build guide.
     - "libcrypto" should already be installed based on the presence of "/lib/@libcrypto.so" and other similar filenames.
     - "libsha1" doesn't appear to be in the repos, so it needs to be built from here: https://github.com/dottedmag/libsha1 To build the package, you need to run "./autogen.sh", "./configure", "make", then "sudo make install". The instructions don't mention the autogen.
