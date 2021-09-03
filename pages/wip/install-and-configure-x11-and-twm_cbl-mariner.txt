@@ -82,4 +82,5 @@ Scratch area:
   - "libmd" appears to need to be compiled as I didn't find it in the repo: https://www.hadrons.org/software/libmd/ You'll have to run "./autogen", "./configure", "make all" (saw "make all" mentioned in one of the mirrors, so I figured it would be a good idea to use it), then "sudo make install".
   - I couldn't seem to find "CommonCrypto" or figure out how to install it. There is code on Apple's website, but I don't know what to download.
 - "fontconfig" installs "freetype".
-- Building X11 says it fails on "libxcvt", so it needs to be installed from source: https://gitlab.freedesktop.org/xorg/lib/libxcvt
+- Building X11 says it fails on "libxcvt", so it needs to be installed from source: https://gitlab.freedesktop.org/xorg/lib/libxcvt You'll need to install "meson" and "ninja-build" if they're not already installed, then run "meson build/" (or "meson build/ --prefix=..", but the instructions had "... --prefix=..." with the ellipsis and it failed), then "sudo ninja -C build/ install". For some reason, running "cvt" says "cvt: error while loading shared libraries: libxcvt.so.0: cannot open shared object file: No such file or directory".
+- I can't seem to get any further with the build.sh script, so I think I'll try building from the archive files.
