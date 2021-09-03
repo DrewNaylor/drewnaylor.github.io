@@ -72,15 +72,17 @@ After installing "Xinit", "startx" should now be installed, so you can use it to
 
 Scratch area:
 
-- Instructions for compiling X11 say to install "libgbm", but I didn't find it under that exact name. Rather, it was "mesa-libgbm". There's also "mesa-libgbm-devel", but I don't know if I need that one or not. Note that this package is in the "coreui" repo.
-- "autopoint" links to a page on "gettext". Not sure if they're the same thing, but "gettext" is mentioned in a different section.
-- "libmtdev" is listed as a package that needs to be installed, but "mtdev" appears to be the name. Didn't notice it was actually listed on the linked page until after doing a search for "mt" with dnf. This package requires the "coreui" repo.
-- "libudev" appeared to be already installed, though it took a while to confirm it even though I assumed it was installed (the presence of "/lib/@libudev.so" and other similar filenames should confirm it's installed).
-- You'll have to install one of the following cryptographic libraries, according to the build guide.
-  - "libcrypto" should already be installed based on the presence of "/lib/@libcrypto.so" and other similar filenames.
-  - "libsha1" doesn't appear to be in the repos, so it needs to be built from here: https://github.com/dottedmag/libsha1 To build the package, you need to run "./autogen.sh", "./configure", "make", then "sudo make install". The instructions don't mention the autogen.
-  - "libmd" appears to need to be compiled as I didn't find it in the repo: https://www.hadrons.org/software/libmd/ You'll have to run "./autogen", "./configure", "make all" (saw "make all" mentioned in one of the mirrors, so I figured it would be a good idea to use it), then "sudo make install".
-  - I couldn't seem to find "CommonCrypto" or figure out how to install it. There is code on Apple's website, but I don't know what to download.
-- "fontconfig" installs "freetype".
-- Building X11 says it fails on "libxcvt", so it needs to be installed from source: https://gitlab.freedesktop.org/xorg/lib/libxcvt You'll need to install "meson" and "ninja-build" if they're not already installed, then run "meson build/" (or "meson build/ --prefix=..", but the instructions had "... --prefix=..." with the ellipsis and it failed), then "sudo ninja -C build/ install". For some reason, running "cvt" says "cvt: error while loading shared libraries: libxcvt.so.0: cannot open shared object file: No such file or directory".
-- I can't seem to get any further with the build.sh script, so I think I'll try building from the archive files.
+- Dependencies
+  - Instructions for compiling X11 say to install "libgbm", but I didn't find it under that exact name. Rather, it was "mesa-libgbm". There's also "mesa-libgbm-devel", but I don't know if I need that one or not. Note that this package is in the "coreui" repo.
+  - "autopoint" links to a page on "gettext". Not sure if they're the same thing, but "gettext" is mentioned in a different section.
+  - "libmtdev" is listed as a package that needs to be installed, but "mtdev" appears to be the name. Didn't notice it was actually listed on the linked page until after doing a search for "mt" with dnf. This package requires the "coreui" repo.
+   - "libudev" appeared to be already installed, though it took a while to confirm it even though I assumed it was installed (the presence of "/lib/@libudev.so" and other similar filenames should confirm it's installed).
+  - You'll have to install one of the following cryptographic libraries, according to the build guide.
+    - "libcrypto" should already be installed based on the presence of "/lib/@libcrypto.so" and other similar filenames.
+    - "libsha1" doesn't appear to be in the repos, so it needs to be built from here: https://github.com/dottedmag/libsha1 To build the package, you need to run "./autogen.sh", "./configure", "make", then "sudo make install". The instructions don't mention the autogen.
+    - "libmd" appears to need to be compiled as I didn't find it in the repo: https://www.hadrons.org/software/libmd/ You'll have to run "./autogen", "./configure", "make all" (saw "make all" mentioned in one of the mirrors, so I figured it would be a good idea to use it), then "sudo make install".
+    - I couldn't seem to find "CommonCrypto" or figure out how to install it. There is code on Apple's website, but I don't know what to download.
+  - "fontconfig" installs "freetype".
+- Building Xorg/X11
+  - The build script says it fails on "libxcvt", so it needs to be installed from source: https://gitlab.freedesktop.org/xorg/lib/libxcvt You'll need to install "meson" and "ninja-build" if they're not already installed, then run "meson build/" (or "meson build/ --prefix=..", but the instructions had "... --prefix=..." with the ellipsis and it failed), then "sudo ninja -C build/ install". For some reason, running "cvt" says "cvt: error while loading shared libraries: libxcvt.so.0: cannot open shared object file: No such file or directory".
+  - I can't seem to get any further with the build.sh script, so I think I'll try building from the archive files.
