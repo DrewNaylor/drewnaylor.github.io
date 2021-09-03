@@ -77,4 +77,4 @@ Scratch area:
 - "libmtdev" is listed as a package that needs to be installed, but "mtdev" appears to be the name. Didn't notice it was actually listed on the linked page until after doing a search for "mt" with dnf. This package requires the "coreui" repo.
 - libudev appeared to be already installed, though it took a while to confirm it even though I assumed it was installed (the presence of "/lib/@libudev.so" and other similar filenames should confirm it's installed).
 - libcrypto should already be installed based on the presence of "/lib/@libcrypto.so" and other similar filenames.
-- libsha1 doesn't appear to be in the repos, so it needs to be built from here: https://github.com/dottedmag/libsha1
+- libsha1 doesn't appear to be in the repos, so it needs to be built from here: https://github.com/dottedmag/libsha1 To build the package, you need to run "./autogen.sh", "./configure", "make", then "sudo make install". The instructions don't mention the autogen.
