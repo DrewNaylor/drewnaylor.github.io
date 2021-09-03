@@ -78,3 +78,4 @@ Scratch area:
 - libudev appeared to be already installed, though it took a while to confirm it even though I assumed it was installed (the presence of "/lib/@libudev.so" and other similar filenames should confirm it's installed).
 - libcrypto should already be installed based on the presence of "/lib/@libcrypto.so" and other similar filenames.
 - libsha1 doesn't appear to be in the repos, so it needs to be built from here: https://github.com/dottedmag/libsha1 To build the package, you need to run "./autogen.sh", "./configure", "make", then "sudo make install". The instructions don't mention the autogen.
+- libmd appears to need to be compiled as I didn't find it in the repo: https://www.hadrons.org/software/libmd/ You'll have to run "./autogen", "./configure", "make all" (saw "make all" mentioned in one of the mirrors, so I figured it would be a good idea to use it), then "sudo make install".
