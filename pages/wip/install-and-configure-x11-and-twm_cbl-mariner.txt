@@ -66,3 +66,10 @@ After installing Xorg Server from coreui repo as shown in part 2:
   C. Install it
   
 After installing "Xinit", "startx" should now be installed, so you can use it to run X11.
+
+
+
+
+Scratch area:
+
+- Instructions for compiling X11 say to install "libgbm", but I didn't find it under that exact name. Rather, it was "mesa-libgbm". There's also "mesa-libgbm-devel", but I don't know if I need that one or not. Note that this package is in the "coreui" repo.
