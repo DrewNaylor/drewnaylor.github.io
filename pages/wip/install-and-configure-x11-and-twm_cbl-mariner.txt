@@ -6,6 +6,7 @@ I'd also like to acknowledge NTDEV's efforts in getting X11 to work on CBL-Marin
 <B>Note 2:</B> I can't seem to figure out how to get the required drivers installed, and I don't know if I'm doing things correctly.
 Update: Even though mesa was in the repos, I think I need to manually compile it to get the correct drivers:
 https://docs.mesa3d.org/drivers/svga3d.html
+Update 2: NTDEV recently uploaded a video showing Xfce on CBL-Mariner. This video showed `sudo X` being run from one TTY, then `xfce4-session` being run from another TTY. I remember X giving me a blank screen when trying to install it in the video, so I think I'll have to install it from the repos. That may end up being useful, and I'll have to test that as soon as possible to see if I can get something like Xeyes running.
 
 Turns out that some of the scripts for/from `./configure` and `autogen.sh` have to be modified as they try to put files into `/usr/local/lib` and `/usr/local/bin` instead of `/usr/lib` and `/usr/bin`, which prevents the build from working. Piping the `./configure` output to a file will show which flags need to be modified. The LFS ones cause issues.
 Additionally, there are instructions for building X11/Xorg here: https://www.x.org/wiki/Building_the_X_Window_System/ 
