@@ -1,0 +1,39 @@
+---
+layout: post
+title: "How to Switch TTYs with the PinePhone Keyboard Case (systemd-only method)"
+comments: true
+id: 2022-04-14-switch-tty-pinephone-keyboard
+date: 2022-04-14T01:01:01-08:00
+sitemap:
+  lastmod: 2022-04-14T01:01:01-08:00
+  priority: 0.5
+  changefreq: monthly
+  exclude: 'no'
+---
+
+<p>Recently I made a <a href="https://youtu.be/XXX3ntsgTSE" target=_blank>video showing how to switch TTYs with the PinePhone Keyboard Case</a>, so this is a text-based version if that's easier to follow.</p>
+
+<p>These instructions will assume you've already shimmed your keyboard case's connectors and updated your installation. Be sure to check the tips below the instructions if you have any problems with them.</p>
+
+<p>I based my steps off this forum thread here, with some steps taken from replies to the original post: <a href="https://forum.pine64.org/showthread.php?tid=16156" target=_blank>https://forum.pine64.org/showthread.php?tid=16156</a>. Thanks to Rob Johnson for <a href="https://twitter.com/vgnmnky/status/1497632215940968448?s=21" target=_blank>linking me to the thread</a>! My version is influenced by what they wrote, as I looked for the ppkb package since they mentioned it.</p>
+
+<p>These steps should work with the Beta Edition of the original PinePhone, not sure about the Pro when running Tow-Boot or older versions of the original PinePhone. Some or all of these steps may also not work without systemd (I'd like to have instructions for non-systemd distros like postmarketOS, I'm just not aware of any right now).</p>
+
+<ol>
+<li>Run <code>cd /boot</code>.
+<li>Run <code>sudo nano boot.txt</code>.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>Note:</b> You can use any text editor you prefer, but it would be easiest to use terminal-based ones.
+<li>At the <code>setenv bootargs</code> line, add a <code>space</code>, then type <code>kb151.disable_input</code>.
+<li>Press <code>Ctrl+X</code>, lift off the keys, then type <code>y</code>, then press <code>Enter</code>.
+<li>Run <code>sudo pp-uboot-mkscr</code>.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>Note:</b> The original tutorial used <code>sudo ./mkscr</code>which may work if the other command doesn't. I don't know what command to run for Tow-Boot, but it may be listed at the top of the <code>boot.txt</code> file in its comments, so be sure to check there if nothing seems to work.
+<li>Run <code>sudo pacman -Syu ppkb-tools</code>.<b>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>Note:</b> This command will differ depending on your distro and/or package manager, but this is for Manjaro and should work for Arch and Arch-based distros in general.
+<li>Run <code>sudo systemctl enable ppkb-i2c-inputd.service</code>.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>Note:</b> I don't currently know how to make this work on non-systemd distros, sorry.
+<li>Reboot.
+<li>Test it by pressing <code>Ctrl+Alt+Pine+3</code>, and return to the default TTY (at least for Manjaro Plasma Mobile; may differ by distro) with <code>Ctrl+Alt+Pine+2</code>.
+</ol>
+
+<p>Tip: If you have trouble typing the symbols on the left side of the <code>F#</code> (Function number key) labels, you can use <code>Function+Pine+#</code>, where <code>#</code> is the number you get when you push a top-row key (that isn't Escape or Backspace) without using modifiers. For example, <code>Function+Pine+7</code> gets you a hyphen.</p>
+<p>Tip 2: Add <code>fbcon=rotate:1</code> to the end of the <code>setenv bootargs</code> line for a TTY that's easier to use with the keyboard case (thanks to Tom Poter for the original comment! I've retyped it slightly differently.)</p>
