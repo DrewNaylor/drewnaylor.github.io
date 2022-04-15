@@ -26,7 +26,7 @@ sitemap:
 <li>At the <code>setenv bootargs</code> line, add a <code>space</code>, then type <code>kb151.disable_input</code>.
 <li>Press <code>Ctrl+X</code>, lift off the keys, then type <code>y</code>, then press <code>Enter</code>.
 <li>Run <code>sudo pp-uboot-mkscr</code>.<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<b>Note:</b> The original tutorial used <code>sudo ./mkscr</code>which may work if the other command doesn't. I don't know what command to run for Tow-Boot, but it may be listed at the top of the <code>boot.txt</code> file in its comments, so be sure to check there if nothing seems to work.
+&nbsp;&nbsp;&nbsp;&nbsp;<b>Note:</b> The original tutorial used <code>sudo ./mkscr</code> which may work if the other command doesn't. I don't know what command to run for Tow-Boot, but it may be listed at the top of the <code>boot.txt</code> file in its comments, so be sure to check there if nothing seems to work.
 <li>Run <code>sudo pacman -Syu ppkb-tools</code>.<b>
 &nbsp;&nbsp;&nbsp;&nbsp;<b>Note:</b> This command will differ depending on your distro and/or package manager, but this is for Manjaro and should work for Arch and Arch-based distros in general.
 <li>Run <code>sudo systemctl enable ppkb-i2c-inputd.service</code>.<br>
