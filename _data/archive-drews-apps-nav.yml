@@ -1,42 +1,21 @@
 - title: "Home"
-  href: "/"
+  href: "/pages/old-project-sites/drews-apps/index.html"
 
 - title: "About"
-  href: "/pages/about.html"
+  href: "/pages/old-project-sites/drews-apps/about.html"
 
-- title: "My Blog"
-  href: "/blog/"
-  
-- title: "Rom Hacking"
+- title: "General news"
+  href: "/pages/old-project-sites/drews-apps/general-news.html"
+
+- title: "App Launcher for Office"
   subcategories:
-    - subtitle: "Cheat Codes"
-      subhref: "/pages/rom-hacking-pages/cheat-codes.html"
-    - subtitle: "Editors"
-      subhref: "/pages/rom-hacking-pages/editors.html"
-    - subtitle: "Emulators"
-      subhref: "/pages/rom-hacking-pages/emulators.html"
-    - subtitle: "ROM Hacks"
-      subhref: "/pages/rom-hacking-pages/rom-hacks.html"
+    - subtitle: "App Launcher 32-bit"
+      subhref: "/pages/old-project-sites/drews-apps/app-launcher-32.html"
+    - subtitle: "App Launcher 64-bit"
+      subhref: "/pages/old-project-sites/drews-apps/app-launcher-64.html"
       
-- title: "Videos"
-  href: "/pages/videos.html"
+- title: "Drew's Browser"
+  href: "/pages/old-project-sites/drews-apps/drews-browser.html"
   
-# - title: "Projects"
-  # subcategories:
-    # - subtitle: "UXL Launcher"
-      # subhref: "/pages/projects/uxl-launcher.html"
-    # - subtitle: "HideSettingsPages"
-      # subhref: "/pages/projects/hidesettingspages.html"
-    # - subtitle: "thumbsget"
-      # subhref: "/pages/projects/thumbsget.html"
-    # - subtitle: "applauncher-icons"
-      # subhref: "/pages/projects/applauncher-icons.html"
-
-- title: "More..."
-  subcategories:
-    - subtitle: "Archived pages and projects"
-      subhref: "/pages/old-project-sites/archive.html"
-    - subtitle: "Links"
-      subhref: "/pages/links.html"
-    - subtitle: "Contact Me"
-      subhref: "/pages/contact-me.html"
+- title: "Contact"
+  href: "/pages/old-project-sites/drews-apps/contact.html"
