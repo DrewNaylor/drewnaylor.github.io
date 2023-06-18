@@ -17,6 +17,12 @@ permalink: /blog/
         <hr>
         <p></p>
         {{ post.excerpt }}
+        <!-- "Read More" if necessary: https://talk.jekyllrb.com/t/add-read-more-only-to-posts-that-are-longer-than-excerpt/3931/4 
+        Also see the next post right after that one that says to use post.content.size 
+        Had to change the href a bit, too. -->
+        {% if post.content.size > post.excerpt.size %}
+          <p><a href="{{ site.baseurl }}/{{ post.url }}">Read more...</a></p>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>
