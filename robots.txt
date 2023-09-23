@@ -6,6 +6,12 @@ sitemap: false
 
 Sitemap: https://drew-naylor.com/sitemap.xml
 
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
 User-agent: *
 Disallow: /404
 
