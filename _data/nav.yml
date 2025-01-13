@@ -31,9 +31,8 @@
       subhref: "https://codeberg.org/DrewNaylor"
     - subtitle: "YouTube"
       subhref: "https://www.youtube.com/@DrewTNaylor"
-  subcategories:
     - subtitle: "More social links"
-      subhref: "/blog/2017/test-post"
+      subhref: "https://drew-naylor.com/blog/2017/test-post"
   
 # - title: "Projects"
   # subcategories:
