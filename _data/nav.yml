@@ -22,7 +22,7 @@
   href: "/pages/videos.html"
 
 - title: "Socials"
-  subcategories:
+  external-subcategories:
     - subtitle: "Mastodon"
       subhref: "https://mastodon.online/@DrewNaylor"
     - subtitle: "Bluesky"
@@ -31,6 +31,7 @@
       subhref: "https://codeberg.org/DrewNaylor"
     - subtitle: "YouTube"
       subhref: "https://www.youtube.com/@DrewTNaylor"
+  subcategories:
     - subtitle: "More social links"
       subhref: "/blog/2017/test-post"
   
