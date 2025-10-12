@@ -1,10 +1,10 @@
 /* thumbsget4web - Gets the maxres or hq thumbnail for YouTube videos from
 original video URL. Not associated with YouTube or Google/Alphabet.
-Copyright (C) 2019-2020 Drew Naylor
+Copyright (C) 2019-2020, 2025 Drew Naylor
 
 thumbsget4web is a port of thumbsget to a webpage.
 You can get the code for thumbsget and thumbsget4web from:
-https://github.com/DrewNaylor/thumbsget/
+https://codeberg.org/DrewNaylor/thumbsget
 
 YouTube and all related words are copyright
 and trademark Google/Alphabet. Explained more in About window.
@@ -16,7 +16,7 @@ and trademark Google/Alphabet. Explained more in About window.
 This file is part of thumbsget4web.
 
 thumbsget4web is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
+it under the terms of the GNU Affero General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
@@ -25,7 +25,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License
+You should have received a copy of the GNU Affero General Public License
 along with thumbsget4web.  If not, see <http://www.gnu.org/licenses/>. */
 
 div[id="noscript"] {
@@ -45,6 +45,16 @@ div {
 }
 
 label {
+	font-family: Arial,sans-serif;
+	font-size: 13px;
+}
+
+details {
+	font-family: Arial,sans-serif;
+	font-size: 13px;
+}
+
+summary {
 	font-family: Arial,sans-serif;
 	font-size: 13px;
 }
