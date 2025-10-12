@@ -7,11 +7,11 @@
   
      <!-- thumbsget4web - Gets the maxres or hq thumbnail for YouTube videos from
 original video URL. Not associated with YouTube or Google/Alphabet.
-Copyright (C) 2019-2020, 2023 Drew Naylor
+Copyright (C) 2019-2020, 2023, 2025 Drew Naylor
 
 thumbsget4web is a port of thumbsget to a webpage.
 You can get the code for thumbsget and thumbsget4web from:
-https://github.com/DrewNaylor/thumbsget/
+https://codeberg.org/DrewNaylor/thumbsget
 
 YouTube and all related words are copyright
 and trademark Google/Alphabet. Explained more in About window.
@@ -23,7 +23,7 @@ and trademark Google/Alphabet. Explained more in About window.
 This file is part of thumbsget4web.
 
 thumbsget4web is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
+it under the terms of the GNU Affero General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
@@ -32,13 +32,13 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License
+You should have received a copy of the GNU Affero General Public License
 along with thumbsget4web.  If not, see <http://www.gnu.org/licenses/>. -->
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="application-name" content="thumbsget4web">
   <meta name="description" content="thumbsget4web - Gets the thumbnail from a YouTube video's URL. Not associated with YouTube or Google/Alphabet.">
-   <meta name="author" content="Drew Naylor">
+  <meta name="author" content="Drew Naylor">
    
    <link rel="stylesheet" type="text/css" href="thumbsget4web-ui-styling.css">
 
@@ -47,7 +47,7 @@ along with thumbsget4web.  If not, see <http://www.gnu.org/licenses/>. -->
     <script type="text/javascript">
         // Some parts of this JS were based on this
         // SO answer:
-        // https://stackoverflow.com/a/11219605
+        // https://stackoverflow.com/a/11219605 under CC BY-SA 3.0
         // Most of the code in the getThumbnailUrl()
         // function was copied over from the
         // Windows Forms version of thumbsget and was
@@ -151,44 +151,6 @@ along with thumbsget4web.  If not, see <http://www.gnu.org/licenses/>. -->
             return "https://i.ytimg.com/vi/kK7TJIMab7g/maxresdefault.jpg"
                 }
             }
-
-
-
-        function showAboutMessage() {
-            // This shows the about message for thumbsget4web.
-            alert("About thumbsget4web:" + "\n" +
-                "\n" +
-                "thumbsget4web" + "\n" +
-                "Version 0.2.1.1" + "\n" +
-                "Gets the maxres or hq thumbnail for YouTube videos from original video URL. Not associated with YouTube or Google/Alphabet." + "\n" +
-                "Copyright © 2019-2020, 2023 Drew Naylor. Licensed under the Gnu GPL v3+." + "\n" +
-"\n" +
-                "thumbsget4web is a port of thumbsget to a webpage." + "\n" +
-                "You can get the code for thumbsget and thumbsget4web from:" + "\n" +
-                "https://github.com/DrewNaylor/thumbsget/" + "\n" +
-"\n" +
-                "Below is part of the Gnu GPLv3+ as it applies to thumbsget" + "\n" +
-                "Visit http://www.gnu.org/licenses/gpl.html for the full license." + "\n" +
-"\n" +
-                "thumbsget is free software: you can redistribute it and/or modify" + "\n" +
-                "it under the terms of the GNU General Public License as published by" + "\n" +
-                "the Free Software Foundation, either version 3 of the License, or" + "\n" +
-                "(at your option) any later version." + "\n" +
-"\n" +
-                "thumbsget is distributed in the hope that it will be useful," + "\n" +
-                "but WITHOUT ANY WARRANTY; without even the implied warranty of" + "\n" +
-                "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the" + "\n" +
-                "GNU General Public License for more details." + "\n" +
-                "Copyright notice: YouTube and all related words and" + "\n" +
-                "trademarks/registered trademarks owned by Google/Alphabet in the United States" + "\n" +
-                "and/or other countries are Copyright Google/Alphabet. All" + "\n" +
-                "Rights Reserved to Google/Alphabet for Google/Alphabet's copyrights, trademarks," + "\n" +
-                "and registered trademarks." + "\n" +
-                "Any other companies mentioned own their respective copyrights/trademarks." + "\n" +
-"\n" +
-                "Google/Alphabet is not affiliated with either the thumbsget project or" + "\n" +
-                "Drew Naylor and does not endorse this software.");
-        }
         </script>
 
     
@@ -209,18 +171,61 @@ along with thumbsget4web.  If not, see <http://www.gnu.org/licenses/>. -->
    <img id="thumbnailImageBox" alt="(Thumbnail preview box)">
     <br>
     <br>
+</div>
 
-    <a href="javascript:showAboutMessage()">About thumbsget4web</a>
+<!-- We have to close the div for the thumbnail thing or else we can't space the about thing down far enough. -->
+
+<br>
+
+<div>
+    <!-- About text that's been placed into a details thing so it can all be shown even when javascript isn't allowed and on browsers that don't show all of it. -->
+    <details>
+        <summary>About</summary>
+        About thumbsget4web:<br>
+        <br>
+        thumbsget4web<br>
+        Version 0.3<br>
+        <a href="https://codeberg.org/DrewNaylor/thumbsget/src/branch/master/thumbsget4web#recent-updates" target=_blank>Check out the latest changes</a><br>
+        Gets the maxres or hq thumbnail for YouTube videos from original video URL. Not associated with YouTube or Google/Alphabet.<br>
+        Copyright © 2019-2020, 2023, 2025 Drew Naylor. Licensed under the Gnu AGPL v3+.<br>
+        <br>
+        thumbsget4web is a port of thumbsget to a webpage.<br>
+        You can get the code for thumbsget and thumbsget4web from:<br>
+        <a href="https://codeberg.org/DrewNaylor/thumbsget" target=_blank>https://codeberg.org/DrewNaylor/thumbsget</a> <br>
+        <br>
+        Below is part of the Gnu AGPLv3+ as it applies to thumbsget4web<br>
+        Visit <a href="https://www.gnu.org/licenses/agpl-3.0.html" target=_blank>https://www.gnu.org/licenses/agpl-3.0.html</a> for the full license.<br>
+        <br>
+        thumbsget4web is free software: you can redistribute it and/or modify<br>
+        it under the terms of the GNU Affero General Public License as published by<br>
+        the Free Software Foundation, either version 3 of the License, or<br>
+        (at your option) any later version.<br>
+        <br>
+        thumbsget4web is distributed in the hope that it will be useful,<br>
+        but WITHOUT ANY WARRANTY; without even the implied warranty of<br>
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br>
+        GNU General Public License for more details.<br>
+        Copyright notice: YouTube and all related words and<br>
+        trademarks/registered trademarks owned by Google/Alphabet in the United States<br>
+        and/or other countries are Copyright Google/Alphabet. All<br>
+        Rights Reserved to Google/Alphabet for Google/Alphabet's copyrights, trademarks,<br>
+        and registered trademarks.<br>
+        Any other companies mentioned own their respective copyrights/trademarks.<br>
+        <br>
+        Google/Alphabet is not affiliated with either the thumbsget/thumbsget4web project or<br>
+        Drew Naylor and does not endorse this software.
+    </details>
 	</div>
     
+    <br>
 
     <noscript><div id="noscript"><p>JavaScript is required to use thumbsget4web.
 	<br>
 	If you don't want to enable JavaScript, 
-    you can <a href="https://github.com/DrewNaylor/thumbsget/" target="_blank"> use the desktop version
+    you can <a href="https://codeberg.org/DrewNaylor/thumbsget" target="_blank"> use the desktop version
     of thumbsget</a> instead.
 	<br>
-    There are versions of thumbsget for both Windows and macOS. thumbsget for Windows can also be run on Linux if .Net 4.6.1 is installed, which can be done through winetricks after installing Wine.</p>
+    There are versions of thumbsget for both Windows and macOS. thumbsget for Windows can also be run on Linux if .Net 4.6.1 is installed, which can be done through winetricks after installing Wine, although Wine Mono might be good enough for it.</p>
 	</noscript>
 	<script>if(navigator.getEnvironmentIntegrity!==undefined)document.querySelector('body').innerHTML='<h1>Your browser contains Google DRM</h1>"Web Environment Integrity" is a Google euphemism for a DRM that is designed to prevent ad-blocking. In support of an open web, this website does not function with this DRM. Please install a browser such as <a href="https://mozilla.org/en-US/firefox/new/">Firefox</a> that respects your freedom and supports ad blockers. This script was copied from <a href="https://chaos.social/@jaseg/110781307230828144" target=_blank>jaseg&#39;s post</a>.';</script>
 </body>
